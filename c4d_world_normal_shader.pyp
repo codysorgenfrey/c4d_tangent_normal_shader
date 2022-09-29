@@ -4,7 +4,7 @@ import c4d
 PLUGIN_ID = 1060113
 
 
-class c4d_inverted_z_world_normal_shader(c4d.plugins.ShaderData):
+class c4d_world_normal_shader(c4d.plugins.ShaderData):
     
     def __init__(self):
         # If a Python exception occurs during the calculation of a pixel colorize this one in red for debugging purposes
@@ -34,4 +34,4 @@ class c4d_inverted_z_world_normal_shader(c4d.plugins.ShaderData):
 if __name__ == '__main__':
     # String resource, see c4d_symbols.h, have to be redefined in python
     IDS_PY_FRESNEL = 10000
-    c4d.plugins.RegisterShaderPlugin(PLUGIN_ID, c4d.plugins.GeLoadString(IDS_PY_FRESNEL), 0, c4d_inverted_z_world_normal_shader, "", 0)
+    c4d.plugins.RegisterShaderPlugin(PLUGIN_ID, c4d.plugins.GeLoadString(IDS_PY_FRESNEL), 0, c4d_world_normal_shader, "", 0)
